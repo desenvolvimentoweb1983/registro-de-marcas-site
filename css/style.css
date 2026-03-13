@@ -416,3 +416,35 @@ max-width:550px;
 flex:1;
 text-align:right;
 }
+/* MENU MOBILE MODERNO */
+
+@media (max-width:768px){
+
+header nav{
+position:fixed;
+top:0;
+right:-260px;
+width:260px;
+height:100vh;
+background:#004080;
+flex-direction:column;
+padding-top:80px;
+transition:0.3s;
+z-index:2000;
+}
+
+header nav.active{
+right:0;
+}
+
+header nav a{
+padding:15px;
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.nav-toggle{
+display:flex;
+z-index:2100;
+}
+
+}
