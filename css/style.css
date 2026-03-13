@@ -34,13 +34,13 @@ header {
   padding: 15px 0;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
 }
 
 header .container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -50,21 +50,46 @@ header h1 {
   font-size: 1.8rem;
 }
 
+header .logo {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
+
+/* Navegação desktop */
 header nav {
   display: flex;
+  gap: 25px;
   align-items: center;
-  gap: 20px;
 }
 
 header nav a {
   color: #fff;
   font-weight: bold;
-  transition: color 0.3s;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
 }
 
 header nav a:hover,
 header nav a.active {
-  color: #ffcc00;
+  background-color: #ffcc00;
+  color: #004080;
+}
+
+/* Botão hamburger mobile */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.nav-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 3px;
 }
 
 /* =========================
@@ -74,41 +99,27 @@ header nav a.active {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 40px 20px;
-  min-height: 400px;
+  padding: 60px 20px;
   color: #004080;
-  position: relative;
   flex-wrap: wrap;
-}
-
-.hero .container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
 }
 
 .hero-content {
   background-color: #fff;
-  padding: 20px 25px;
+  padding: 30px 25px;
   border-radius: 10px;
-  max-width: 45%;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  z-index: 1;
+  max-width: 50%;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
 .hero-content h2 {
-  font-size: 1.8rem;
-  line-height: 1.3;
-  margin-bottom: 12px;
-  color: #004080;
+  font-size: 2rem;
+  margin-bottom: 15px;
 }
 
 .hero-content p {
   font-size: 1rem;
-  margin-bottom: 15px;
-  color: #004080;
+  margin-bottom: 20px;
 }
 
 .hero-content .btn {
@@ -123,10 +134,6 @@ header nav a.active {
   transition: background 0.3s;
 }
 
-.hero-content .btn i {
-  margin-right: 10px;
-}
-
 .hero-content .btn:hover {
   background-color: #1ebe57;
 }
@@ -135,7 +142,6 @@ header nav a.active {
   max-width: 80%;
   height: auto;
   border-radius: 10px;
-  object-fit: cover;
 }
 
 /* =========================
@@ -181,15 +187,10 @@ header nav a.active {
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
-  transition: background 0.3s;
 }
 
 .card .btn:hover {
   background-color: #00264d;
-}
-
-.card i {
-  margin-right: 10px;
 }
 
 .card-img {
@@ -201,49 +202,7 @@ header nav a.active {
 }
 
 /* =========================
-   5️⃣ Páginas de serviço detalhado
-========================= */
-.servico-detalhe h3 {
-  margin-top: 30px;
-  margin-bottom: 15px;
-  color: #004080;
-}
-
-.servico-detalhe ul {
-  margin-left: 20px;
-  margin-bottom: 20px;
-}
-
-.servico-detalhe ul li {
-  margin-bottom: 10px;
-}
-
-.servico-detalhe p {
-  margin-bottom: 20px;
-}
-
-.servico-detalhe .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #25d366;
-  color: #fff;
-  padding: 12px 25px;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background 0.3s;
-}
-
-.servico-detalhe .btn:hover {
-  background-color: #1ebe57;
-}
-
-.servico-detalhe .btn i {
-  margin-right: 10px;
-}
-
-/* =========================
-   6️⃣ Blog
+   5️⃣ Blog
 ========================= */
 .blog h2 {
   text-align: center;
@@ -253,7 +212,6 @@ header nav a.active {
 
 .blog ul {
   list-style: none;
-  margin: 20px 0;
   padding: 0;
 }
 
@@ -268,12 +226,6 @@ header nav a.active {
   box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
 
-.blog li a {
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: #004080;
-}
-
 .blog-img {
   width: 120px;
   height: 80px;
@@ -282,14 +234,13 @@ header nav a.active {
 }
 
 /* =========================
-   7️⃣ Contato
+   6️⃣ Contato
 ========================= */
 .contato {
   background-color: #004080;
   color: #fff;
   text-align: center;
   padding: 40px 20px;
-  position: relative;
 }
 
 .contato h2 {
@@ -298,61 +249,30 @@ header nav a.active {
 }
 
 .contato p {
-  font-size: 1rem;
-  margin-bottom: 20px;
-  line-height: 1.5;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 .contato .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   background-color: #25d366;
   color: #fff;
   padding: 12px 25px;
-  font-weight: bold;
   border-radius: 5px;
-  transition: background 0.3s;
 }
 
 .contato .btn:hover {
   background-color: #1ebe57;
 }
 
-.contato .btn i {
-  margin-right: 10px;
-}
-
 /* =========================
-   8️⃣ Footer
+   7️⃣ Footer
 ========================= */
 footer {
   background-color: #004080;
   color: #fff;
   text-align: center;
   padding: 25px 20px;
-  width: 100%;
-}
-
-footer .container {
-  max-width: 1200px;
-  margin: auto;
-  display: block;
-}
-
-footer p {
-  margin: 0;
-  line-height: 1.5;
-}
-
-footer a {
-  color: #ffcc00;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
 }
 
 footer a:hover {
@@ -360,7 +280,7 @@ footer a:hover {
 }
 
 /* =========================
-   9️⃣ WhatsApp Flutuante
+   8️⃣ WhatsApp flutuante
 ========================= */
 .whatsapp-float {
   position: fixed;
@@ -372,26 +292,14 @@ footer a:hover {
   color: #fff;
   border-radius: 50%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   font-size: 28px;
-  text-decoration: none;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
   z-index: 9999;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.whatsapp-float i {
-  color: #fff;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
 /* =========================
-   🔹 Formulários
+   9️⃣ Formulários
 ========================= */
 form input, form textarea {
   width: 100%;
@@ -405,49 +313,27 @@ form button {
   background-color: #004080;
   color: #fff;
   padding: 12px 25px;
-  border: none;
   border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-form button:hover {
-  background-color: #00264d;
-}
-
-/* =========================
-   🔹 Logo no Header
-========================= */
-.logo {
-  height: 50px;
-  width: auto;
-  vertical-align: middle;
-  margin-right: 10px;
 }
 
 /* =========================
    🔹 Responsivo geral
 ========================= */
 
-/* ===== Desktop até tablet (1024px) ===== */
+/* ===== Tablet 1024px ===== */
 @media (max-width: 1024px) {
   .hero {
     flex-direction: column;
     text-align: center;
   }
 
-  .hero-content {
-    max-width: 90%;
-    margin-bottom: 20px;
-  }
-
-  .hero-image img {
+  .hero-content, .hero-image {
     max-width: 90%;
     margin: auto;
   }
 }
 
-/* ===== Tablet (768px) ===== */
+/* ===== Tablet 768px ===== */
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
@@ -457,140 +343,31 @@ form button:hover {
     font-size: 1.5rem;
   }
 
-  .hero-content p {
-    font-size: 0.9rem;
-  }
-
   header nav {
     flex-direction: column;
     width: 100%;
-    margin-top: 10px;
+    display: none; /* inicialmente escondido */
+  }
+
+  header nav.active {
+    display: flex;
   }
 
   header nav a {
-    margin: 5px 0;
-  }
-
-  .blog li {
-    flex-direction: column;
+    width: 100%;
     text-align: center;
+    padding: 12px 0;
   }
 
-  .blog-img {
-    width: 90%;
-    height: auto;
+  .nav-toggle {
+    display: flex;
   }
 }
 
-/* ===== Mobile (480px) ===== */
+/* ===== Mobile 480px ===== */
 @media (max-width: 480px) {
-  /* Header */
-  header .container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  header h1 {
-    font-size: 1.4rem;
-  }
-
-  header nav {
-    width: 100%;
-    gap: 10px;
-  }
-
-  header nav a {
-    display: block;
-    width: 100%;
-    text-align: left;
-    padding: 8px 0;
-  }
-
-  /* Hero */
-  .hero {
-    padding: 20px 10px;
-  }
-
-  .hero-content {
-    max-width: 100%;
-    padding: 15px;
-  }
-
   .hero-content h2 {
     font-size: 1.3rem;
-  }
-
-  .hero-content p {
-    font-size: 0.85rem;
-  }
-
-  .hero-image img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* Cards */
-  .card {
-    padding: 15px;
-  }
-
-  .card h3 {
-    font-size: 1.1rem;
-  }
-
-  .card p {
-    font-size: 0.85rem;
-  }
-
-  /* Blog */
-  .blog li {
-    flex-direction: column;
-    text-align: center;
-    padding: 15px;
-  }
-
-  .blog-img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
-
-  /* WhatsApp */
-  .whatsapp-float {
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-    bottom: 15px;
-    right: 15px;
-  }
-
-  /* Footer e Formulários */
-  footer p {
-    font-size: 0.85rem;
-  }
-
-  form input, form textarea, form button {
-    font-size: 0.85rem;
-  }
-}
-/* ===== Hero section para celulares ===== */
-@media (max-width: 480px) {
-  .hero {
-    flex-direction: column; /* empilha content e image */
-    text-align: center; /* centraliza textos */
-    padding: 20px 10px;
-  }
-
-  .hero-content {
-    max-width: 100%; /* ocupa toda largura da tela */
-    padding: 15px;
-    margin-bottom: 15px; /* espaço entre content e image */
-  }
-
-  .hero-content h2 {
-    font-size: 1.3rem;
-    line-height: 1.4;
   }
 
   .hero-content p {
@@ -598,14 +375,15 @@ form button:hover {
   }
 
   .hero-content .btn {
-    font-size: 0.9rem;
     padding: 10px 20px;
   }
 
   .hero-image img {
-    max-width: 100%; /* ocupa largura total */
+    max-width: 100%;
     height: auto;
-    border-radius: 10px;
-    margin: auto;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
   }
 }
