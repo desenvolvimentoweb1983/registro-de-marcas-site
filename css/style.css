@@ -93,14 +93,18 @@ header nav a.active {
 }
 
 /* =========================
-   3️⃣ Hero (Home e Serviços)
+   3️⃣ Hero
 ========================= */
+
 .hero {
+  padding: 60px 20px;
+  color: #004080;
+}
+
+.hero .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 60px 20px;
-  color: #004080;
   flex-wrap: wrap;
 }
 
@@ -145,8 +149,9 @@ header nav a.active {
 }
 
 /* =========================
-   4️⃣ Serviços (Cards)
+   4️⃣ Serviços
 ========================= */
+
 .servicos h2 {
   text-align: center;
   margin: 50px 0 30px;
@@ -204,6 +209,7 @@ header nav a.active {
 /* =========================
    5️⃣ Blog
 ========================= */
+
 .blog h2 {
   text-align: center;
   margin: 50px 0 30px;
@@ -212,7 +218,6 @@ header nav a.active {
 
 .blog ul {
   list-style: none;
-  padding: 0;
 }
 
 .blog li {
@@ -236,6 +241,7 @@ header nav a.active {
 /* =========================
    6️⃣ Contato
 ========================= */
+
 .contato {
   background-color: #004080;
   color: #fff;
@@ -268,6 +274,7 @@ header nav a.active {
 /* =========================
    7️⃣ Footer
 ========================= */
+
 footer {
   background-color: #004080;
   color: #fff;
@@ -282,6 +289,7 @@ footer a:hover {
 /* =========================
    8️⃣ WhatsApp flutuante
 ========================= */
+
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
@@ -301,7 +309,9 @@ footer a:hover {
 /* =========================
    9️⃣ Formulários
 ========================= */
-form input, form textarea {
+
+form input,
+form textarea {
   width: 100%;
   padding: 12px;
   margin-bottom: 15px;
@@ -317,69 +327,92 @@ form button {
 }
 
 /* =========================
-   🔹 Responsivo geral
+   🔹 Responsivo
 ========================= */
 
-/* ===== Tablet 1024px ===== */
 @media (max-width: 1024px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
 
-  .hero-content, .hero-image {
-    max-width: 90%;
-    margin: auto;
-  }
+.hero .container {
+flex-direction: column;
+text-align: center;
 }
 
-/* ===== Tablet 768px ===== */
+.hero-content,
+.hero-image {
+max-width: 90%;
+margin: auto;
+}
+
+}
+
 @media (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
 
-  .hero-content h2 {
-    font-size: 1.5rem;
-  }
-
-  header nav {
-    flex-direction: column;
-    width: 100%;
-    display: flex; /* CORREÇÃO AQUI */
-  }
-
-  header nav a {
-    width: 100%;
-    text-align: center;
-    padding: 12px 0;
-  }
-
-  .nav-toggle {
-    display: flex;
-  }
+.grid {
+grid-template-columns: 1fr;
 }
 
-/* ===== Mobile 480px ===== */
+.hero-content h2 {
+font-size: 1.5rem;
+}
+
+header nav {
+flex-direction: column;
+width: 100%;
+display: none;
+}
+
+header nav.active {
+display: flex;
+}
+
+header nav a {
+width: 100%;
+text-align: center;
+padding: 12px 0;
+}
+
+.nav-toggle {
+display: flex;
+}
+
+}
+
 @media (max-width: 480px) {
-  .hero-content h2 {
-    font-size: 1.3rem;
-  }
 
-  .hero-content p {
-    font-size: 0.85rem;
-  }
+.hero-content h2 {
+font-size: 1.3rem;
+}
 
-  .hero-content .btn {
-    padding: 10px 20px;
-  }
+.hero-content p {
+font-size: 0.85rem;
+}
 
-  .hero-image img {
-    max-width: 100%;
-    height: auto;
-  }
+.hero-content .btn {
+padding: 10px 20px;
+}
 
-  header h1 {
-    font-size: 1.4rem;
-  }
+.hero-image img {
+max-width: 100%;
+}
+
+header h1 {
+font-size: 1.4rem;
+}
+
+}
+.hero .container{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:40px;
+}
+
+.hero-content{
+flex:1;
+max-width:550px;
+}
+
+.hero-image{
+flex:1;
+text-align:right;
 }
