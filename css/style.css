@@ -421,24 +421,23 @@ text-align:right;
 @media (max-width:768px){
 
 header nav{
-position:fixed;
-top:0;
-right:-260px;
-width:260px;
-height:100vh;
+position:absolute;
+top:70px;
+right:10px;
+width:200px;
 background:#004080;
 flex-direction:column;
-padding-top:80px;
-transition:0.3s;
-z-index:2000;
+border-radius:8px;
+overflow:hidden;
+display:none;
 }
 
 header nav.active{
-right:0;
+display:flex;
 }
 
 header nav a{
-padding:15px;
+padding:12px;
 border-bottom:1px solid rgba(255,255,255,0.1);
 }
 
