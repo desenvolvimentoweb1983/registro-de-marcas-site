@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Páginas principais -->
+  <url>
+    <loc>https://protege-marca.vercel.app/</loc>
+  </url>
+  <url>
+    <loc>https://protege-marca.vercel.app/empresa.html</loc>
+  </url>
+  <url>
+    <loc>https://protege-marca.vercel.app/contato.html</loc>
+  </url>
+
+  <!-- Serviços -->
+  <url>
+    <loc>https://protege-marca.vercel.app/servicos/registro-de-marca.html</loc>
+  </url>
+  <url>
+    <loc>https://protege-marca.vercel.app/servicos/registro-de-patente.html</loc>
+  </url>
+  <url>
+    <loc>https://protege-marca.vercel.app/servicos/direito-autoral.html</loc>
+  </url>
+  <url>
+    <loc>https://protege-marca.vercel.app/servicos/desenho-industrial.html</loc>
+  </url>
+  <url>
+    <loc>https://protege-marca.vercel.app/servicos/registro-de-software.html</loc>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://protege-marca.vercel.app/blog/index.html</loc>
+  </url>
+  <url>
+    <loc>https://protege-marca.vercel.app/blog/como-registrar-uma-marca.html</loc>
+  </url>
+  <url>
+    <loc>https://protege-marca.vercel.app/blog/quanto-custa-registrar-uma-marca.html</loc>
+  </url>
+  <url>
+    <loc>https://protege-marca.vercel.app/blog/erros-ao-registrar-marca.html</loc>
+  </url>
+
+</urlset>
