@@ -78,3 +78,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+const navToggle = document.querySelector(".nav-toggle");
+const navMenu = document.querySelector("header nav");
+
+if (navToggle) {
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+}
