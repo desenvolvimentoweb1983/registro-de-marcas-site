@@ -574,3 +574,38 @@ form button:hover {
     font-size: 0.85rem;
   }
 }
+/* ===== Hero section para celulares ===== */
+@media (max-width: 480px) {
+  .hero {
+    flex-direction: column; /* empilha content e image */
+    text-align: center; /* centraliza textos */
+    padding: 20px 10px;
+  }
+
+  .hero-content {
+    max-width: 100%; /* ocupa toda largura da tela */
+    padding: 15px;
+    margin-bottom: 15px; /* espaço entre content e image */
+  }
+
+  .hero-content h2 {
+    font-size: 1.3rem;
+    line-height: 1.4;
+  }
+
+  .hero-content p {
+    font-size: 0.85rem;
+  }
+
+  .hero-content .btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .hero-image img {
+    max-width: 100%; /* ocupa largura total */
+    height: auto;
+    border-radius: 10px;
+    margin: auto;
+  }
+}
