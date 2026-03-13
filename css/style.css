@@ -416,8 +416,20 @@ form button:hover {
 }
 
 /* =========================
+   🔹 Logo no Header
+========================= */
+.logo {
+  height: 50px;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+/* =========================
    🔹 Responsivo geral
 ========================= */
+
+/* ===== Desktop até tablet (1024px) ===== */
 @media (max-width: 1024px) {
   .hero {
     flex-direction: column;
@@ -435,6 +447,7 @@ form button:hover {
   }
 }
 
+/* ===== Tablet (768px) ===== */
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
@@ -469,12 +482,95 @@ form button:hover {
   }
 }
 
-/* =========================
-   🔹 Logo no Header
-========================= */
-.logo {
-  height: 50px;
-  width: auto;
-  vertical-align: middle;
-  margin-right: 10px;
+/* ===== Mobile (480px) ===== */
+@media (max-width: 480px) {
+  /* Header */
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  header nav {
+    width: 100%;
+    gap: 10px;
+  }
+
+  header nav a {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 8px 0;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 20px 10px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .hero-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .hero-content p {
+    font-size: 0.85rem;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Cards */
+  .card {
+    padding: 15px;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+  }
+
+  /* Blog */
+  .blog li {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .blog-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  /* WhatsApp */
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  /* Footer e Formulários */
+  footer p {
+    font-size: 0.85rem;
+  }
+
+  form input, form textarea, form button {
+    font-size: 0.85rem;
+  }
 }
