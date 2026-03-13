@@ -8,26 +8,21 @@ console.log("Site carregado");
 const whatsappBtn = document.querySelector('.whatsapp-float');
 
 if (whatsappBtn) {
-  whatsappBtn.style.opacity = '0';
+
   whatsappBtn.style.transition = 'opacity 0.4s, transform 0.4s';
-  whatsappBtn.style.transform = 'translateY(20px)';
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 150) {
+
+    if (window.scrollY > 20) {
       whatsappBtn.style.opacity = '1';
       whatsappBtn.style.transform = 'translateY(0)';
     } else {
-      whatsappBtn.style.opacity = '0';
-      whatsappBtn.style.transform = 'translateY(20px)';
+      whatsappBtn.style.opacity = '0.8';
+      whatsappBtn.style.transform = 'translateY(0)';
     }
+
   });
 
-  whatsappBtn.addEventListener('mouseenter', () => {
-    whatsappBtn.style.transform = 'scale(1.1)';
-  });
-  whatsappBtn.addEventListener('mouseleave', () => {
-    whatsappBtn.style.transform = 'scale(1)';
-  });
 }
 
 // =========================
