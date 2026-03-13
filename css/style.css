@@ -346,11 +346,7 @@ form button {
   header nav {
     flex-direction: column;
     width: 100%;
-    display: none; /* inicialmente escondido */
-  }
-
-  header nav.active {
-    display: flex;
+    display: flex; /* CORREÇÃO AQUI */
   }
 
   header nav a {
